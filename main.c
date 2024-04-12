@@ -3,12 +3,12 @@
 #include "so_long.h"
 
 // // Define a struct to hold your application state
-typedef struct  s_vars {
-     void    *mlx;
-     void    *win;
-     int     x;
-     int     y;
-}               t_vars;
+//typedef struct  s_vars {
+//     void    *mlx;
+//     void    *win;
+//     int     x;
+//     int     y;
+//}               t_vars;
 
 // Define a function to handle key press events
 // int key_hook(int keycode, t_vars *vars)
