@@ -2,7 +2,6 @@
 # define SO_LONG_H
 
 # include "../mlx/mlx.h"
-# include "../Libft/libft.h"
 
 # include <fcntl.h>
 # include <unistd.h>
