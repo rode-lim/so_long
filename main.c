@@ -1,6 +1,6 @@
 // main.c
 
-#include "so_long.h"
+//#include "so_long.h"
 
 // // Define a struct to hold your application state
 //typedef struct  s_vars {
@@ -58,8 +58,8 @@
 //     return (0);
 // }
 
-void draw_zigzag_line(void *mlx, void *win, int x, int y)
-{
+//void draw_zigzag_line(void *mlx, void *win, int x, int y)
+/*{
     int a;
 
     a = 0;
@@ -165,4 +165,4 @@ int main(void)
     mlx_loop(mlx);
 
     return (0);
-}
+}*/

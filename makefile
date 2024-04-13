@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-LDFLAGS = -L/home/lima/mlx -lmlx -lXext -lX11
+LDFLAGS = -L/home/lima/minilibx_linux -lmlx -lXext -lX11
 NAME = my_program
-SRC = main.c
+SRC = mapreadingtest.c
 
 all: $(NAME)
 
