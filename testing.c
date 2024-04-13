@@ -1,4 +1,4 @@
-#include "so_long.h"
+/*#include "so_long.h"
 
 int	key_hook(int keycode, t_vars *vars)
 {
@@ -57,4 +57,4 @@ int	main(int argc, char **argv)
 	mlx_key_hook(vars.win, key_hook, &vars);
 	mlx_loop(vars.mlx);
 	return (0);
-}
+}*/

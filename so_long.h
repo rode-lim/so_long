@@ -31,6 +31,8 @@ typedef struct s_vars
 	int		y;
 }	t_vars;
 
+//void	ft_readmap(char *map, int len);
+
 //int		key_hook(int keycode, t_vars *vars);
 
 #endif // SO_LONG_H
