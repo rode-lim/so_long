@@ -22,6 +22,18 @@ void	floor_create(t_game *game, int i)
 	if (ft_strlen(game->map[i]) != game->size_x / 64
 		&& i != (game->size_y / 64))
 		ft_error_map("Wrong map format!\n", game);
+	if (game->map[(game->size_y / 64)]
+		&& game->map[(game->size_y / 64)][0] != '\0')
+		ft_error_map("Wrong map!\n", game);
+	while (game->map[i])
+	{
+		j = 0;
+		while ((game->map[i][j]))
+		{
+			if (!ft_strchr("10PCE", game->map[i][j]))
+				ft_error("Map doesn't meet the 10PCE criteria!\n", game);
+		}
+	}
 }
 
 void	create_maplenght(char *line, t_game *game, int i)
