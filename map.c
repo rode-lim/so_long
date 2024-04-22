@@ -32,6 +32,7 @@ void	floor_create(t_game *game, int i)
 		{
 			if (!ft_strchr("10PCE", game->map[i][j]))
 				ft_error("Map doesn't meet the 10PCE criteria!\n", game);
+			
 		}
 	}
 }
