@@ -32,7 +32,7 @@ typedef struct s_player
 	int	y;
 	int	move;
 	int	collect;
-}	t_player;
+}		t_player;
 
 typedef struct s_texture
 {
@@ -40,13 +40,13 @@ typedef struct s_texture
 	void	*exit;
 	void	*collectible;
 	void	*wall;
-}	t_texture;
+}			t_texture;
 
 typedef struct s_game
 {
 	void		*mlx;
 	void		*win;
-	int			**map;
+	char		**map;
 	int			*coinmap_x;
 	int			*coinmap_y;
 	int			coincheck;
@@ -57,7 +57,13 @@ typedef struct s_game
 	int			size_y;
 	t_texture	texture;
 	t_player	player;
-}	t_game;
+}				t_game;
+
+typedef struct s_block
+{
+	char	*path;
+	char	*name;
+}			t_block;
 
 typedef struct s_image
 {
@@ -80,8 +86,15 @@ void	floor_make(t_game *game, int i);
 void	create_maplenght(char *line, t_game *game, int i);
 void	map_line(t_game *game, char **argv);
 void	ft_put_image(t_game *game, t_image image, int x, int y);
-void	initialize_game(t_game *game, int width, int height);
 void	data_start(t_game *game);
+void	map_make(t_game *game, int i);
+void	ft_error(char *str, t_game *game);
+void	window_destroy(t_game *game);
+void	ft_maperror(char *str, t_game *game);
+void	destroy_map(t_game *game);
 void	ft_walls(t_game *game, int i, int j);
+void	*place_img(t_game *game, t_image img, int x, int y);
+int		ft_count_line(int fd);
+int		ft_line(int fd);
 
 #endif

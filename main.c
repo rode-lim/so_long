@@ -38,5 +38,5 @@ int	main(int argc, char **argv)
 	game.win = mlx_new_window(game.mlx, game.size_x, game.size_y, "so_long");
 	data_start(&game);
 	map_line(&game, argv);
-	initialize_game(&game, width, height);
+	mlx_loop(game.mlx);
 }
