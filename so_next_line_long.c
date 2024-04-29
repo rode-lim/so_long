@@ -52,3 +52,37 @@ int	ft_count_line(int	fd)
 		linecount++;
 	return (linecount);
 }
+
+void	extra_free(char *line)
+{
+	free(line);
+	line = NULL;
+}
+
+char *get_next_line(int fd)
+{
+	char	buffer;
+	char	*line;
+	int		readbytes;
+	int		i;
+
+	readbytes = 1;
+	i = 0;
+	line = (char *)malloc(ft_line(fd) + 1);
+	buffer = 0;
+	if (fd < 0)
+		return (NULL);
+	while (readbytes > 0)
+	{
+		readbytes = read(fd, &buffer, 1);
+		if (readbytes <= 0)
+			break ;
+		line[i++] = buffer;
+		if (buffer == '\n')
+			break ;
+	}
+	line[i] = '\0';
+	if (!*line)
+		extra_free(line);
+	return (line);
+}

@@ -96,5 +96,6 @@ void	ft_walls(t_game *game, int i, int j);
 void	*place_img(t_game *game, t_image img, int x, int y);
 int		ft_count_line(int fd);
 int		ft_line(int fd);
+t_block	get_block(char name);
 
 #endif

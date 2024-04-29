@@ -19,7 +19,18 @@ void	map_make(t_game	*game, int i)
 	t_block	map;
 
 	img.wlx = *game;
-	
+	j = 0;
+	while (game->map[i])
+	{
+		while (game->map[i][j])
+		{
+			map = get_block(game->map[i][j]);
+			img.path = map.path;
+			place_img(game, img, (i * 64), (j * 64));
+			j++;
+		}
+		i++;
+	}
 }
 
 void	floor_make(t_game *game, int i)
